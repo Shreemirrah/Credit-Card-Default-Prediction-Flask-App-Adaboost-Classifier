@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title>Credit Card Default Predictor</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+  <div class="page">
+    <h1>Credit Card Default Predition</h1>
+    <h4>
+      <br>
+        {{pred}}
+      <br>
+    </h4>
+    <form action='/predict' method="post">
+            <input id="last_name" name="LIMIT_BAL" placeholder="Limit Balance"  type="text" class="validate" required="required" /><br>
+            <input placeholder="Month one Payment" name="PAY_0" id="first_name" type="text" class="validate" required="required" /><br>
+            <input placeholder="Month Two Payment" name="PAY_2" id="first_name" type="text" class="validate" required="required" /><br>
+            <input placeholder="Month Three Payment" name="PAY_3" id="first_name" type="text" class="validate" required="required" /><br>
+            <input placeholder="Month Four Payment" name="PAY_4" id="first_name" type="text" class="validate" required="required" /><br>
+          <input placeholder="Month 5 Payment" name="PAY_5" id="first_name" type="text" class="validate" required="required" /><br>
+            <input placeholder="Month Six Payment" name="PAY_6" id="first_name" type="text" class="validate" required="required" /><br>
+          <input id="_name" name="BILL_AMT1" placeholder="Bill Month 1%" type="text" class="validate" required="required" /><br>
+          <input id="_name" name="BILL_AMT2" placeholder="Bill Month 2%" type="text" class="validate" required="required" /><br>
+          <input id="_name" name="BILL_AMT3" placeholder="Bill Month 3%" type="text" class="validate" required="required" /><br>
+          <input id="_name" name="BILL_AMT4" placeholder="Bill Month 4%" type="text" class="validate" required="required" /><br>
+          <input id="_name" name="BILL_AMT5" placeholder="Bill Month 5%" type="text" class="validate" required="required" /><br>
+          <input id="_name" name="BILL_AMT6" placeholder="Bill Month 6%" type="text" class="validate" required="required" /><br>
+          <input id="_name" name="PAY_AMT1" placeholder="Pay Month 1%" type="text" class="validate" required="required" /><br>
+          <input id="_name" name="PAY_AMT2" placeholder="Pay Month 2%" type="text" class="validate" required="required" /><br>
+          <input id="_name" name="PAY_AMT3" placeholder="Pay Month 3%" type="text" class="validate" required="required" /><br>
+          <input id="_name" name="PAY_AMT4" placeholder="Pay Month 4%" type="text" class="validate" required="required" /><br>
+          <input id="_name" name="PAY_AMT5" placeholder="Pay Month 5%" type="text" class="validate" required="required" /><br>
+          <input id="_name" name="PAY_AMT6" placeholder="Pay Month 6%" type="text" class="validate" required="required" /><br>
+          <button type="submit" class="btn btn-primary btn-block btn-large">Predict Probability</button>
+
+    </form>
+  </div>
+  </body>
+</html>
+
